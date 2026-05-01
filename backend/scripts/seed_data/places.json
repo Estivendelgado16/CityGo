@@ -1,0 +1,47 @@
+[
+  {
+    "name": "El Cielo",
+    "category": "restaurante",
+    "description": "Restaurante de autor del chef Juan Manuel Barrientos. Cocina colombiana contemporánea con técnicas de vanguardia y experiencia multisensorial. Cada plato cuenta una historia sobre la cultura colombiana a través de sabores innovadores.",
+    "short_description": "Alta cocina colombiana contemporánea con experiencia multisensorial",
+    "address": "Cra. 40 #10A-22, El Poblado",
+    "zone": "El Poblado",
+    "price_range": "$$$$",
+    "vibe_tags": ["fine dining", "experiencia", "innovador", "romántico"],
+    "image_url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600",
+    "opening_hours": {"martes": "12:00-15:00, 19:00-23:00", "miercoles": "12:00-15:00, 19:00-23:00", "jueves": "12:00-15:00, 19:00-23:00", "viernes": "12:00-15:00, 19:00-23:00", "sabado": "12:00-15:00, 19:00-23:00"},
+    "social_links": {"instagram": "@elcielomedellin", "website": "https://elcielo.com.co"},
+    "latitude": 6.2088,
+    "longitude": -75.5699
+  },
+  {
+    "name": "Mondongos",
+    "category": "restaurante",
+    "description": "El clásico de la cocina paisa con más de 40 años de tradición. Bandeja paisa generosa, mondongo tradicional y sancocho que sabe a casa de la abuela. Ambiente familiar y porciones abundantes a precios accesibles.",
+    "short_description": "Cocina paisa tradicional, generosa y a buen precio",
+    "address": "Cra. 70 #44B-41, Laureles",
+    "zone": "Laureles",
+    "price_range": "$",
+    "vibe_tags": ["tradicional", "familiar", "abundante", "económico"],
+    "image_url": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600",
+    "opening_hours": {"lunes": "07:00-21:00", "martes": "07:00-21:00", "miercoles": "07:00-21:00", "jueves": "07:00-21:00", "viernes": "07:00-21:00", "sabado": "07:00-21:00", "domingo": "07:00-21:00"},
+    "social_links": {"instagram": "@mondongos"},
+    "latitude": 6.2466,
+    "longitude": -75.5972
+  },
+  {
+    "name": "Alambique",
+    "category": "bar",
+    "description": "Coctelería artesanal con ingredientes colombianos en un ambiente íntimo con terraza panorámica. Los bartenders preparan cócteles personalizados según tu gusto. Especialidad en destilados colombianos y botánicos locales.",
+    "short_description": "Coctelería artesanal con terraza y vista panorámica a la ciudad",
+    "address": "Cra. 37 #8A-37, El Poblado",
+    "zone": "El Poblado",
+    "price_range": "$$$",
+    "vibe_tags": ["rooftop", "cócteles", "romántico", "vista", "íntimo"],
+    "image_url": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600",
+    "opening_hours": {"miercoles": "17:00-01:00", "jueves": "17:00-01:00", "viernes": "17:00-02:00", "sabado": "17:00-02:00"},
+    "social_links": {"instagram": "@alambiquebar"},
+    "latitude": 6.2095,
+    "longitude": -75.5688
+  }
+]
