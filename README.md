@@ -11,7 +11,7 @@
 <br>
 
 <div align="center">
-  <h1>🏔️ CityGo</h1>
+  <h1>🌆 CityGo</h1>
   <h3><em>Tu Guía en Medellín</em></h3>
   <p><strong>El asistente de viaje con inteligencia artificial que transforma la forma de descubrir Medellín.</strong></p>
   <br>
@@ -30,7 +30,7 @@
   <h2>✨ Descubre Medellín como nunca antes</h2>
 </div>
 
-**Parcero** es un asistente conversacional impulsado por inteligencia artificial que actúa como un amigo local experto en Medellín. Olvídate de buscar en mil sitios web — Parcero entiende lo que buscas en lenguaje natural y te recomienda los mejores lugares, eventos y experiencias en la ciudad.
+**CityGo** es un asistente conversacional impulsado por inteligencia artificial que actúa como un amigo local experto en Medellín. Olvídate de buscar en mil sitios web — CityGo entiende lo que buscas en lenguaje natural y te recomienda los mejores lugares, eventos y experiencias en la ciudad.
 
 <p align="center">
   <i>"Cálido y cercano, como un amigo local que conoce todos los secretos de la ciudad."</i>
@@ -38,14 +38,14 @@
 
 <br>
 
-## 🎯 ¿Qué hace Parcero?
+## 🎯 ¿Qué hace CityGo?
 
 | | |
 |---|---|
 | 🍽️ **Recomendaciones inteligentes** | Restaurantes, bares, vida nocturna, cultura, naturaleza y más |
 | 🗣️ **Lenguaje natural** | Habla como lo harías con un amigo: *"¿Qué hay para hacer hoy?"*, *"Quiero algo tranquilo para comer"*, *"Planes culturales"* |
 | ⚡ **Respuestas en tiempo real** | Conversaciones fluidas con streaming de texto y tarjetas visuales |
-| 🧠 **Agente con memoria** | Parcero aprende tus gustos y se adapta a tus preferencias |
+| 🧠 **Agente con memoria** | CityGo aprende tus gustos y se adapta a tus preferencias |
 | ❤️ **Guarda tus favoritos** | Crea una lista de lugares que quieras visitar |
 | 🎭 **Eventos en vivo** | Entérate de conciertos, ferias y actividades culturales |
 
@@ -90,10 +90,10 @@
 ## ✨ Características destacadas
 
 ### 🤖 Agente IA con ReAct Loop
-Parcero no es un chatbot común. Usa un ciclo **Razonamiento + Acción** (ReAct) con 5 herramientas especializadas para buscar lugares, consultar opiniones de la comunidad, obtener detalles, buscar eventos y hasta aprender tus preferencias sobre la marcha.
+CityGo no es un chatbot común. Usa un ciclo **Razonamiento + Acción** (ReAct) con 5 herramientas especializadas para buscar lugares, consultar opiniones de la comunidad, obtener detalles, buscar eventos y hasta aprender tus preferencias sobre la marcha.
 
 ### 🔍 Búsqueda semántica
-Gracias a **embeddings de OpenAI + pgvector en PostgreSQL**, Parcero entiende el significado detrás de tus palabras. No importa cómo lo digas — él te entiende.
+Gracias a **embeddings de OpenAI + pgvector en PostgreSQL**, CityGo entiende el significado detrás de tus palabras. No importa cómo lo digas — él te entiende.
 
 ### ⚡ Streaming en tiempo real
 Las respuestas fluyen carácter por carácter vía **Server-Sent Events (SSE)**. La conversación se siente viva, natural e inmediata.
@@ -131,7 +131,7 @@ Autenticación mediante **Supabase Auth** con JWT y políticas de seguridad a ni
       <td align="center"><b>👤 Perfil</b></td>
     </tr>
     <tr>
-      <td><img src="https://via.placeholder.com/280x560/2D6A4F/FFFFFF?text=Chat+Parcero" alt="Chat" width="280"></td>
+      <td><img src="https://via.placeholder.com/280x560/2D6A4F/FFFFFF?text=Chat+CityGo" alt="Chat" width="280"></td>
       <td><img src="https://via.placeholder.com/280x560/FEFAE0/2D6A4F?text=Tus+Favoritos" alt="Favoritos" width="280"></td>
       <td><img src="https://via.placeholder.com/280x560/E76F51/FFFFFF?text=Tu+Perfil" alt="Perfil" width="280"></td>
     </tr>
@@ -219,7 +219,7 @@ Este proyecto fue desarrollado con fines educativos y de demostración.
 
 <div align="center">
   <br>
-  <p>Hecho con 💚 por el equipo Parcero</p>
+  <p>Hecho con 💚 por el equipo CityGo</p>
   <p>
     <a href="https://parcero-api.onrender.com">🌐 Web</a> ·
     <a href="./frontend/README.md">📱 Frontend</a> ·
@@ -227,6 +227,6 @@ Este proyecto fue desarrollado con fines educativos y de demostración.
   </p>
   <br>
   <p>
-    <sub>🏔️ <em>Medellín — La ciudad de la eterna primavera</em></sub>
+    <sub>🌆 <em>Medellín — La ciudad de la eterna primavera</em></sub>
   </p>
 </div>
