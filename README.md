@@ -11,7 +11,7 @@
 <br>
 
 <div align="center">
-  <h1>🏔️ Parcero</h1>
+  <h1>🏔️ CityGo</h1>
   <h3><em>Tu Guía en Medellín</em></h3>
   <p><strong>El asistente de viaje con inteligencia artificial que transforma la forma de descubrir Medellín.</strong></p>
   <br>
