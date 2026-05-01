@@ -9,10 +9,7 @@ from app.agent.tool_executor import execute_tool
 from app.prompts.system_prompt import build_system_prompt
 
 settings = get_settings()
-openai_client = AsyncOpenAI(
-    api_key=settings.OPENAI_API_KEY,
-    base_url=settings.DEEPSEEK_BASE_URL,
-)
+openai_client = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
 
 async def agent_loop(
     user_message: str,
@@ -37,7 +34,7 @@ async def agent_loop(
 
     for iteration in range(MAX_ITERATIONS):
         response = await openai_client.chat.completions.create(
-            model="deepseek-chat",
+            model="gpt-4o-mini",
             messages=messages,
             tools=AGENT_TOOLS,
             tool_choice="auto",
