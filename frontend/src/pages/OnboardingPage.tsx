@@ -13,7 +13,7 @@ export default function OnboardingPage() {
           <span className="text-4xl">🏔️</span>
         </div>
         <h1 className="font-display text-3xl font-bold text-gray-900 mb-2">
-          ¡Bienvenido a Parcero!
+          ¡Bienvenido a CityGo!
         </h1>
         <p className="text-gray-500 mb-8 leading-relaxed">
           Tu guía personal para descubrir lo mejor de Medellín. Cuéntanos qué
