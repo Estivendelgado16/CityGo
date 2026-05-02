@@ -8,13 +8,13 @@ from app.routers import auth, onboarding, chat, places, feedback, conversations
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    print("🚀 Parcero Backend arrancando...")
+    print("🚀 CityGo Backend arrancando...")
     yield
-    print("👋 Parcero Backend cerrando...")
+    print("👋 CityGo Backend cerrando...")
 
 
 app = FastAPI(
-    title="Parcero API",
+    title="CityGo API",
     description="Agente turístico de Medellín",
     version="0.1.0",
     lifespan=lifespan,
@@ -44,4 +44,4 @@ app.include_router(conversations.router, prefix="/api", tags=["Conversations"])
 
 @app.get("/health")
 async def health():
-    return {"status": "ok", "service": "parcero-api"}
+    return {"status": "ok", "service": "CityGo-api"}

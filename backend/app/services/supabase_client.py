@@ -20,3 +20,5 @@ def get_supabase_anon() -> Client:
     """Cliente con anon key (respeta RLS). Para validar tokens de usuario."""
     settings = get_settings()
     return create_client(settings.SUPABASE_URL, settings.SUPABASE_KEY)
+
+
