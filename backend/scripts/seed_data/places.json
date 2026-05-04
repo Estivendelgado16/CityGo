@@ -7,41 +7,1107 @@
     "address": "Cra. 40 #10A-22, El Poblado",
     "zone": "El Poblado",
     "price_range": "$$$$",
-    "vibe_tags": ["fine dining", "experiencia", "innovador", "romántico"],
+    "vibe_tags": [
+      "fine dining",
+      "experiencia",
+      "innovador",
+      "romántico"
+    ],
     "image_url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600",
-    "opening_hours": {"martes": "12:00-15:00, 19:00-23:00", "miercoles": "12:00-15:00, 19:00-23:00", "jueves": "12:00-15:00, 19:00-23:00", "viernes": "12:00-15:00, 19:00-23:00", "sabado": "12:00-15:00, 19:00-23:00"},
-    "social_links": {"instagram": "@elcielomedellin", "website": "https://elcielo.com.co"},
+    "opening_hours": {
+      "martes": "12:00-15:00, 19:00-23:00",
+      "miercoles": "12:00-15:00, 19:00-23:00",
+      "jueves": "12:00-15:00, 19:00-23:00",
+      "viernes": "12:00-15:00, 19:00-23:00",
+      "sabado": "12:00-15:00, 19:00-23:00"
+    },
+    "social_links": {
+      "instagram": "@elcielomedellin"
+    },
     "latitude": 6.2088,
     "longitude": -75.5699
   },
   {
     "name": "Mondongos",
     "category": "restaurante",
-    "description": "El clásico de la cocina paisa con más de 40 años de tradición. Bandeja paisa generosa, mondongo tradicional y sancocho que sabe a casa de la abuela. Ambiente familiar y porciones abundantes a precios accesibles.",
-    "short_description": "Cocina paisa tradicional, generosa y a buen precio",
+    "description": "Restaurante tradicional paisa reconocido por su bandeja paisa y mondongo. Ofrece comida casera con recetas auténticas. Es un punto icónico para quienes buscan sabores tradicionales en Medellín.",
+    "short_description": "Cocina paisa tradicional y abundante",
     "address": "Cra. 70 #44B-41, Laureles",
     "zone": "Laureles",
     "price_range": "$",
-    "vibe_tags": ["tradicional", "familiar", "abundante", "económico"],
+    "vibe_tags": [
+      "tradicional",
+      "familiar",
+      "abundante"
+    ],
     "image_url": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600",
-    "opening_hours": {"lunes": "07:00-21:00", "martes": "07:00-21:00", "miercoles": "07:00-21:00", "jueves": "07:00-21:00", "viernes": "07:00-21:00", "sabado": "07:00-21:00", "domingo": "07:00-21:00"},
-    "social_links": {"instagram": "@mondongos"},
+    "opening_hours": {
+      "lunes": "07:00-21:00",
+      "martes": "07:00-21:00",
+      "miercoles": "07:00-21:00",
+      "jueves": "07:00-21:00",
+      "viernes": "07:00-21:00",
+      "sabado": "07:00-21:00",
+      "domingo": "07:00-21:00"
+    },
+    "social_links": {
+      "instagram": "@mondongos"
+    },
     "latitude": 6.2466,
     "longitude": -75.5972
   },
   {
-    "name": "Alambique",
-    "category": "bar",
-    "description": "Coctelería artesanal con ingredientes colombianos en un ambiente íntimo con terraza panorámica. Los bartenders preparan cócteles personalizados según tu gusto. Especialidad en destilados colombianos y botánicos locales.",
-    "short_description": "Coctelería artesanal con terraza y vista panorámica a la ciudad",
+    "name": "Carmen",
+    "category": "restaurante",
+    "description": "Restaurante de cocina contemporánea latinoamericana con ingredientes locales. Su propuesta mezcla tradición e innovación. Es ideal para experiencias gastronómicas sofisticadas.",
+    "short_description": "Cocina latinoamericana moderna y sofisticada",
+    "address": "Cra. 36 #10A-27, El Poblado",
+    "zone": "El Poblado",
+    "price_range": "$$$$",
+    "vibe_tags": [
+      "gourmet",
+      "moderno",
+      "lujo"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1555992336-03a23c6b3a6b?w=600",
+    "opening_hours": {
+      "martes": "18:00-23:00",
+      "miercoles": "18:00-23:00",
+      "jueves": "18:00-23:00",
+      "viernes": "18:00-23:00",
+      "sabado": "18:00-23:00"
+    },
+    "social_links": {
+      "instagram": "@carmenmedellin"
+    },
+    "latitude": 6.2092,
+    "longitude": -75.5662
+  },
+  {
+    "name": "Pergamino Café",
+    "category": "restaurante",
+    "description": "Café de especialidad reconocido por su café colombiano de alta calidad. Ofrece un ambiente moderno y relajado para trabajar o conversar. También cuenta con opciones de brunch.",
+    "short_description": "Café de especialidad en ambiente moderno",
     "address": "Cra. 37 #8A-37, El Poblado",
     "zone": "El Poblado",
-    "price_range": "$$$",
-    "vibe_tags": ["rooftop", "cócteles", "romántico", "vista", "íntimo"],
-    "image_url": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600",
-    "opening_hours": {"miercoles": "17:00-01:00", "jueves": "17:00-01:00", "viernes": "17:00-02:00", "sabado": "17:00-02:00"},
-    "social_links": {"instagram": "@alambiquebar"},
+    "price_range": "$",
+    "vibe_tags": [
+      "café",
+      "relajado",
+      "moderno"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600",
+    "opening_hours": {
+      "lunes": "07:00-19:00",
+      "martes": "07:00-19:00",
+      "miercoles": "07:00-19:00",
+      "jueves": "07:00-19:00",
+      "viernes": "07:00-19:00",
+      "sabado": "08:00-18:00",
+      "domingo": "08:00-16:00"
+    },
+    "social_links": {
+      "instagram": "@pergaminocafe"
+    },
     "latitude": 6.2095,
-    "longitude": -75.5688
+    "longitude": -75.5671
+  },
+  {
+    "name": "Parque Arví",
+    "category": "cultura",
+    "description": "Reserva natural ubicada en Santa Elena ideal para ecoturismo. Ofrece senderos, actividades culturales y contacto con la naturaleza. Es uno de los destinos más visitados cerca de Medellín.",
+    "short_description": "Reserva natural para ecoturismo",
+    "address": "Santa Elena, Medellín",
+    "zone": "El Centro",
+    "price_range": "$",
+    "vibe_tags": [
+      "naturaleza",
+      "tranquilo",
+      "ecoturismo"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600",
+    "opening_hours": {
+      "lunes": "09:00-17:00",
+      "martes": "09:00-17:00",
+      "miercoles": "09:00-17:00",
+      "jueves": "09:00-17:00",
+      "viernes": "09:00-17:00",
+      "sabado": "09:00-17:00",
+      "domingo": "09:00-17:00"
+    },
+    "social_links": {
+      "instagram": "@parquearvi"
+    },
+    "latitude": 6.2803,
+    "longitude": -75.5
+  },
+  {
+    "name": "Jardín Botánico",
+    "category": "cultura",
+    "description": "Espacio natural con gran biodiversidad en el corazón de Medellín. Ofrece eventos culturales y senderos ecológicos. Es ideal para relajarse y aprender sobre flora local.",
+    "short_description": "Jardín natural en la ciudad",
+    "address": "Cl. 73 #51D-14",
+    "zone": "El Centro",
+    "price_range": "$",
+    "vibe_tags": [
+      "naturaleza",
+      "relajado",
+      "educativo"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=600",
+    "opening_hours": {
+      "lunes": "09:00-17:00",
+      "martes": "09:00-17:00",
+      "miercoles": "09:00-17:00",
+      "jueves": "09:00-17:00",
+      "viernes": "09:00-17:00",
+      "sabado": "09:00-17:00",
+      "domingo": "09:00-17:00"
+    },
+    "social_links": {
+      "instagram": "@jardinbotanicomed"
+    },
+    "latitude": 6.2701,
+    "longitude": -75.5636
+  },
+  {
+    "name": "Cerro Nutibara",
+    "category": "cultura",
+    "description": "Colina icónica con vista panorámica de Medellín. Alberga el Pueblito Paisa, réplica tradicional antioqueña. Es un sitio turístico imperdible.",
+    "short_description": "Mirador icónico de Medellín",
+    "address": "Cl. 30A #55-64",
+    "zone": "Belén",
+    "price_range": "$",
+    "vibe_tags": [
+      "mirador",
+      "cultural",
+      "turístico"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600",
+    "opening_hours": {
+      "lunes": "08:00-18:00",
+      "martes": "08:00-18:00",
+      "miercoles": "08:00-18:00",
+      "jueves": "08:00-18:00",
+      "viernes": "08:00-18:00",
+      "sabado": "08:00-18:00",
+      "domingo": "08:00-18:00"
+    },
+    "social_links": {
+      "instagram": "@pueblopaisa"
+    },
+    "latitude": 6.2442,
+    "longitude": -75.5795
+  },
+  {
+    "name": "Museo de Antioquia",
+    "category": "cultura",
+    "description": "Uno de los museos más importantes de Colombia, con obras de Fernando Botero y artistas internacionales. Ubicado frente a la Plaza Botero, es un referente cultural de la ciudad.",
+    "short_description": "Museo icónico con obras de Botero",
+    "address": "Cl. 52 #52-43, Medellín",
+    "zone": "El Centro",
+    "price_range": "$",
+    "vibe_tags": [
+      "arte",
+      "historia",
+      "cultura"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1566096652582-42c9c3f5e4aa?w=600",
+    "opening_hours": {
+      "lunes": "cerrado",
+      "martes": "10:00-17:30",
+      "miercoles": "10:00-17:30",
+      "jueves": "10:00-17:30",
+      "viernes": "10:00-17:30",
+      "sabado": "10:00-17:30",
+      "domingo": "10:00-16:30"
+    },
+    "social_links": {
+      "instagram": "@museodeantioquia"
+    },
+    "latitude": 6.2518,
+    "longitude": -75.5636
+  },
+  {
+    "name": "Plaza Botero",
+    "category": "cultura",
+    "description": "Espacio público al aire libre con esculturas monumentales de Fernando Botero. Es uno de los puntos turísticos más fotografiados de Medellín.",
+    "short_description": "Plaza con esculturas de Botero",
+    "address": "Cl. 52 #52-43",
+    "zone": "El Centro",
+    "price_range": "$",
+    "vibe_tags": [
+      "arte",
+      "urbano",
+      "turístico"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600",
+    "opening_hours": {
+      "lunes": "00:00-23:59",
+      "martes": "00:00-23:59",
+      "miercoles": "00:00-23:59",
+      "jueves": "00:00-23:59",
+      "viernes": "00:00-23:59",
+      "sabado": "00:00-23:59",
+      "domingo": "00:00-23:59"
+    },
+    "social_links": {
+      "instagram": "@medellin"
+    },
+    "latitude": 6.251,
+    "longitude": -75.5636
+  },
+  {
+    "name": "Comuna 13",
+    "category": "cultura",
+    "description": "Zona reconocida por su transformación social y artística. Famosa por sus grafitis, escaleras eléctricas y tours culturales.",
+    "short_description": "Arte urbano y transformación social",
+    "address": "San Javier, Medellín",
+    "zone": "Belén",
+    "price_range": "$",
+    "vibe_tags": [
+      "urbano",
+      "arte",
+      "historia"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1549887534-1541e9326642?w=600",
+    "opening_hours": {
+      "lunes": "08:00-18:00",
+      "martes": "08:00-18:00",
+      "miercoles": "08:00-18:00",
+      "jueves": "08:00-18:00",
+      "viernes": "08:00-18:00",
+      "sabado": "08:00-18:00",
+      "domingo": "08:00-18:00"
+    },
+    "social_links": {
+      "instagram": "@comuna13"
+    },
+    "latitude": 6.245,
+    "longitude": -75.605
+  },
+  {
+    "name": "Parque Explora",
+    "category": "cultura",
+    "description": "Centro interactivo de ciencia y tecnología con acuario y exposiciones educativas. Ideal para familias y aprendizaje interactivo.",
+    "short_description": "Museo interactivo de ciencia",
+    "address": "Cra. 52 #73-75",
+    "zone": "El Centro",
+    "price_range": "$$",
+    "vibe_tags": [
+      "ciencia",
+      "educativo",
+      "familiar"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1581091215367-59ab6b1b8f5f?w=600",
+    "opening_hours": {
+      "martes": "08:30-17:30",
+      "miercoles": "08:30-17:30",
+      "jueves": "08:30-17:30",
+      "viernes": "08:30-17:30",
+      "sabado": "10:00-18:30",
+      "domingo": "10:00-18:30"
+    },
+    "social_links": {
+      "instagram": "@parqueexplora"
+    },
+    "latitude": 6.2703,
+    "longitude": -75.5652
+  },
+  {
+    "name": "Unidad Deportiva Atanasio Girardot",
+    "category": "deporte",
+    "description": "Complejo deportivo con estadio, coliseos y zonas de entrenamiento. Es el corazón del deporte en Medellín.",
+    "short_description": "Principal complejo deportivo de la ciudad",
+    "address": "Cra. 74 #48-10",
+    "zone": "Estadio",
+    "price_range": "$",
+    "vibe_tags": [
+      "deporte",
+      "activo",
+      "fitness"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1505842465776-3d90f616310d?w=600",
+    "opening_hours": {
+      "lunes": "06:00-22:00",
+      "martes": "06:00-22:00",
+      "miercoles": "06:00-22:00",
+      "jueves": "06:00-22:00",
+      "viernes": "06:00-22:00",
+      "sabado": "06:00-22:00",
+      "domingo": "06:00-22:00"
+    },
+    "social_links": {
+      "instagram": "@inder_medellin"
+    },
+    "latitude": 6.2567,
+    "longitude": -75.5906
+  },
+  {
+    "name": "Ciclovía Medellín",
+    "category": "deporte",
+    "description": "Espacios urbanos cerrados al tráfico para actividades deportivas como ciclismo y running. Se realiza principalmente los domingos.",
+    "short_description": "Ruta para ciclismo y deporte urbano",
+    "address": "Varias zonas de Medellín",
+    "zone": "El Poblado",
+    "price_range": "$",
+    "vibe_tags": [
+      "ciclismo",
+      "fitness",
+      "outdoor"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1508606572321-901ea443707f?w=600",
+    "opening_hours": {
+      "domingo": "07:00-13:00"
+    },
+    "social_links": {
+      "instagram": "@inder_medellin"
+    },
+    "latitude": 6.23,
+    "longitude": -75.57
+  },
+  {
+    "name": "Smart Fit Oviedo",
+    "category": "deporte",
+    "description": "Gimnasio moderno con equipos de última generación. Ofrece entrenamientos personalizados y clases grupales.",
+    "short_description": "Gimnasio moderno en El Poblado",
+    "address": "Centro Comercial Oviedo",
+    "zone": "El Poblado",
+    "price_range": "$$",
+    "vibe_tags": [
+      "gym",
+      "fitness",
+      "moderno"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600",
+    "opening_hours": {
+      "lunes": "05:00-22:00",
+      "martes": "05:00-22:00",
+      "miercoles": "05:00-22:00",
+      "jueves": "05:00-22:00",
+      "viernes": "05:00-22:00",
+      "sabado": "08:00-18:00",
+      "domingo": "08:00-14:00"
+    },
+    "social_links": {
+      "instagram": "@smartfit"
+    },
+    "latitude": 6.1975,
+    "longitude": -75.5749
+  },
+  {
+    "name": "BBC Cervecería",
+    "category": "bar",
+    "description": "Bar de cerveza artesanal con gran variedad de cervezas colombianas. Ambiente relajado ideal para compartir con amigos y disfrutar música.",
+    "short_description": "Bar de cerveza artesanal",
+    "address": "Cra. 43A #10-38, El Poblado",
+    "zone": "El Poblado",
+    "price_range": "$$",
+    "vibe_tags": [
+      "cerveza",
+      "relajado",
+      "amigos"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=600",
+    "opening_hours": {
+      "lunes": "16:00-00:00",
+      "martes": "16:00-00:00",
+      "miercoles": "16:00-00:00",
+      "jueves": "16:00-01:00",
+      "viernes": "16:00-02:00",
+      "sabado": "16:00-02:00",
+      "domingo": "16:00-23:00"
+    },
+    "social_links": {
+      "instagram": "@cerveceriabbc"
+    },
+    "latitude": 6.208,
+    "longitude": -75.568
+  },
+  {
+    "name": "Patrick's Irish Pub",
+    "category": "bar",
+    "description": "Pub irlandés con música en vivo y gran selección de cervezas. Ambiente internacional y acogedor.",
+    "short_description": "Pub irlandés con música en vivo",
+    "address": "Cra. 43E #11-43, El Poblado",
+    "zone": "El Poblado",
+    "price_range": "$$",
+    "vibe_tags": [
+      "pub",
+      "música",
+      "cerveza"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600",
+    "opening_hours": {
+      "lunes": "17:00-01:00",
+      "martes": "17:00-01:00",
+      "miercoles": "17:00-01:00",
+      "jueves": "17:00-02:00",
+      "viernes": "17:00-03:00",
+      "sabado": "17:00-03:00",
+      "domingo": "cerrado"
+    },
+    "social_links": {
+      "instagram": "@patricksmedellin"
+    },
+    "latitude": 6.2075,
+    "longitude": -75.567
+  },
+  {
+    "name": "La House Provenza",
+    "category": "discoteca",
+    "description": "Discoteca moderna en Provenza con música urbana y electrónica. Ambiente exclusivo y animado.",
+    "short_description": "Discoteca moderna en Provenza",
+    "address": "Cra. 35 #7-07, El Poblado",
+    "zone": "El Poblado",
+    "price_range": "$$$",
+    "vibe_tags": [
+      "fiesta",
+      "urbano",
+      "electrónica"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=600",
+    "opening_hours": {
+      "jueves": "22:00-03:00",
+      "viernes": "22:00-04:00",
+      "sabado": "22:00-04:00"
+    },
+    "social_links": {
+      "instagram": "@lahouse"
+    },
+    "latitude": 6.209,
+    "longitude": -75.565
+  },
+  {
+    "name": "Bolivar Park",
+    "category": "cultura",
+    "description": "Parque histórico rodeado de arquitectura colonial y la Catedral Metropolitana. Punto de encuentro cultural en el centro.",
+    "short_description": "Parque histórico central",
+    "address": "Cl. 53 #50-51",
+    "zone": "El Centro",
+    "price_range": "$",
+    "vibe_tags": [
+      "historia",
+      "urbano",
+      "cultura"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600",
+    "opening_hours": {
+      "lunes": "00:00-23:59",
+      "martes": "00:00-23:59",
+      "miercoles": "00:00-23:59",
+      "jueves": "00:00-23:59",
+      "viernes": "00:00-23:59",
+      "sabado": "00:00-23:59",
+      "domingo": "00:00-23:59"
+    },
+    "social_links": {
+      "instagram": "@medellin"
+    },
+    "latitude": 6.2515,
+    "longitude": -75.5655
+  },
+  {
+    "name": "Cerro El Volador",
+    "category": "deporte",
+    "description": "Parque natural con rutas para senderismo y ciclismo. Ofrece vistas panorámicas de la ciudad.",
+    "short_description": "Senderismo con vista panorámica",
+    "address": "Cra. 65 #67-51",
+    "zone": "Estadio",
+    "price_range": "$",
+    "vibe_tags": [
+      "senderismo",
+      "naturaleza",
+      "outdoor"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600",
+    "opening_hours": {
+      "lunes": "05:00-18:00",
+      "martes": "05:00-18:00",
+      "miercoles": "05:00-18:00",
+      "jueves": "05:00-18:00",
+      "viernes": "05:00-18:00",
+      "sabado": "05:00-18:00",
+      "domingo": "05:00-18:00"
+    },
+    "social_links": {
+      "instagram": "@medellin"
+    },
+    "latitude": 6.275,
+    "longitude": -75.585
+  },
+  {
+    "name": "Parque de los Pies Descalzos",
+    "category": "cultura",
+    "description": "Parque interactivo diseñado para la relajación y conexión con los sentidos. Ideal para descansar en el centro.",
+    "short_description": "Parque sensorial en Medellín",
+    "address": "Cra. 58 #42-125",
+    "zone": "El Centro",
+    "price_range": "$",
+    "vibe_tags": [
+      "relajado",
+      "urbano",
+      "sensaciones"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600",
+    "opening_hours": {
+      "lunes": "09:00-18:00",
+      "martes": "09:00-18:00",
+      "miercoles": "09:00-18:00",
+      "jueves": "09:00-18:00",
+      "viernes": "09:00-18:00",
+      "sabado": "09:00-18:00",
+      "domingo": "09:00-18:00"
+    },
+    "social_links": {
+      "instagram": "@medellin"
+    },
+    "latitude": 6.2445,
+    "longitude": -75.574
+  },
+  {
+    "name": "La Pampa Parrilla Argentina",
+    "category": "restaurante",
+    "description": "Restaurante argentino especializado en carnes a la parrilla. Ofrece cortes premium y ambiente acogedor ideal para cenas.",
+    "short_description": "Parrilla argentina con cortes premium",
+    "address": "Cra. 43E #10-33, El Poblado",
+    "zone": "El Poblado",
+    "price_range": "$$$",
+    "vibe_tags": [
+      "parrilla",
+      "carnes",
+      "casual"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1555992336-03a23c6b3a6b?w=600",
+    "opening_hours": {
+      "lunes": "12:00-22:00",
+      "martes": "12:00-22:00",
+      "miercoles": "12:00-22:00",
+      "jueves": "12:00-23:00",
+      "viernes": "12:00-23:00",
+      "sabado": "12:00-23:00",
+      "domingo": "12:00-21:00"
+    },
+    "social_links": {
+      "instagram": "@lapampa"
+    },
+    "latitude": 6.2079,
+    "longitude": -75.5675
+  },
+  {
+    "name": "Chef Burger",
+    "category": "restaurante",
+    "description": "Cadena local famosa por sus hamburguesas artesanales. Ingredientes frescos y combinaciones innovadoras.",
+    "short_description": "Hamburguesas artesanales populares",
+    "address": "Cra. 35 #8A-20, El Poblado",
+    "zone": "El Poblado",
+    "price_range": "$$",
+    "vibe_tags": [
+      "burgers",
+      "casual",
+      "rapido"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=600",
+    "opening_hours": {
+      "lunes": "12:00-22:00",
+      "martes": "12:00-22:00",
+      "miercoles": "12:00-22:00",
+      "jueves": "12:00-23:00",
+      "viernes": "12:00-23:00",
+      "sabado": "12:00-23:00",
+      "domingo": "12:00-21:00"
+    },
+    "social_links": {
+      "instagram": "@chefburger"
+    },
+    "latitude": 6.2098,
+    "longitude": -75.5659
+  },
+  {
+    "name": "La Pizzeria",
+    "category": "restaurante",
+    "description": "Restaurante italiano con pizzas artesanales al horno de lena. Ambiente familiar y acogedor.",
+    "short_description": "Pizza artesanal italiana",
+    "address": "Cra. 34 #8A-30, El Poblado",
+    "zone": "El Poblado",
+    "price_range": "$$",
+    "vibe_tags": [
+      "pizza",
+      "italiano",
+      "casual"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1548365328-9f547fb0953d?w=600",
+    "opening_hours": {
+      "lunes": "12:00-22:00",
+      "martes": "12:00-22:00",
+      "miercoles": "12:00-22:00",
+      "jueves": "12:00-23:00",
+      "viernes": "12:00-23:00",
+      "sabado": "12:00-23:00",
+      "domingo": "12:00-21:00"
+    },
+    "social_links": {
+      "instagram": "@lapizzeria"
+    },
+    "latitude": 6.209,
+    "longitude": -75.5665
+  },
+  {
+    "name": "Taco House",
+    "category": "restaurante",
+    "description": "Restaurante mexicano con tacos autenticos y sabores intensos. Ambiente colorido y juvenil.",
+    "short_description": "Tacos mexicanos autenticos",
+    "address": "Cra. 37 #8A-15, El Poblado",
+    "zone": "El Poblado",
+    "price_range": "$$",
+    "vibe_tags": [
+      "mexicano",
+      "casual",
+      "amigos"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=600",
+    "opening_hours": {
+      "lunes": "12:00-22:00",
+      "martes": "12:00-22:00",
+      "miercoles": "12:00-22:00",
+      "jueves": "12:00-23:00",
+      "viernes": "12:00-23:00",
+      "sabado": "12:00-23:00",
+      "domingo": "12:00-21:00"
+    },
+    "social_links": {
+      "instagram": "@tacohouse"
+    },
+    "latitude": 6.2094,
+    "longitude": -75.5672
+  },
+  {
+    "name": "Veg Station",
+    "category": "restaurante",
+    "description": "Restaurante vegano con opciones saludables y creativas. Ideal para quienes buscan alimentacion consciente.",
+    "short_description": "Comida vegana saludable",
+    "address": "Cra. 43E #11-12, El Poblado",
+    "zone": "El Poblado",
+    "price_range": "$$",
+    "vibe_tags": [
+      "vegano",
+      "saludable",
+      "relajado"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600",
+    "opening_hours": {
+      "lunes": "11:00-20:00",
+      "martes": "11:00-20:00",
+      "miercoles": "11:00-20:00",
+      "jueves": "11:00-20:00",
+      "viernes": "11:00-20:00",
+      "sabado": "11:00-20:00",
+      "domingo": "cerrado"
+    },
+    "social_links": {
+      "instagram": "@vegstation"
+    },
+    "latitude": 6.2077,
+    "longitude": -75.5669
+  },
+  {
+    "name": "Sushi Light",
+    "category": "restaurante",
+    "description": "Restaurante japones con sushi fresco y platos asiaticos. Ambiente moderno y tranquilo.",
+    "short_description": "Sushi fresco en ambiente moderno",
+    "address": "Cra. 33 #7-50, El Poblado",
+    "zone": "El Poblado",
+    "price_range": "$$$",
+    "vibe_tags": [
+      "sushi",
+      "japones",
+      "moderno"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1563612116625-3012372fccce?w=600",
+    "opening_hours": {
+      "lunes": "12:00-22:00",
+      "martes": "12:00-22:00",
+      "miercoles": "12:00-22:00",
+      "jueves": "12:00-23:00",
+      "viernes": "12:00-23:00",
+      "sabado": "12:00-23:00",
+      "domingo": "12:00-21:00"
+    },
+    "social_links": {
+      "instagram": "@sushilight"
+    },
+    "latitude": 6.2105,
+    "longitude": -75.5648
+  },
+  {
+    "name": "El Tibiri Bar",
+    "category": "bar",
+    "description": "Bar tradicional del centro con musica tropical y ambiente autentico. Muy popular entre locales.",
+    "short_description": "Bar tradicional con musica tropical",
+    "address": "Cl. 52 #50-46",
+    "zone": "El Centro",
+    "price_range": "$",
+    "vibe_tags": [
+      "tradicional",
+      "musica",
+      "popular"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=600",
+    "opening_hours": {
+      "lunes": "12:00-00:00",
+      "martes": "12:00-00:00",
+      "miercoles": "12:00-00:00",
+      "jueves": "12:00-01:00",
+      "viernes": "12:00-02:00",
+      "sabado": "12:00-02:00",
+      "domingo": "cerrado"
+    },
+    "social_links": {
+      "instagram": "@eltibiri"
+    },
+    "latitude": 6.2513,
+    "longitude": -75.5639
+  },
+  {
+    "name": "Vintrash Bar",
+    "category": "bar",
+    "description": "Bar tematico con decoracion vintage y ambiente alternativo. Popular entre jovenes.",
+    "short_description": "Bar alternativo con estilo vintage",
+    "address": "Cra. 35 #7-99, El Poblado",
+    "zone": "El Poblado",
+    "price_range": "$$",
+    "vibe_tags": [
+      "alternativo",
+      "fiesta",
+      "urbano"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=600",
+    "opening_hours": {
+      "jueves": "18:00-02:00",
+      "viernes": "18:00-03:00",
+      "sabado": "18:00-03:00"
+    },
+    "social_links": {
+      "instagram": "@vintrash"
+    },
+    "latitude": 6.2091,
+    "longitude": -75.5654
+  },
+  {
+    "name": "Dulce Jesus Mio",
+    "category": "bar",
+    "description": "Bar tematico con estetica colorida y musica latina. Experiencia divertida y diferente.",
+    "short_description": "Bar tematico colorido y divertido",
+    "address": "Envigado",
+    "zone": "Envigado",
+    "price_range": "$$",
+    "vibe_tags": [
+      "tematico",
+      "fiesta",
+      "latino"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=600",
+    "opening_hours": {
+      "viernes": "18:00-03:00",
+      "sabado": "18:00-03:00"
+    },
+    "social_links": {
+      "instagram": "@dulcejesusmio"
+    },
+    "latitude": 6.17,
+    "longitude": -75.58
+  },
+  {
+    "name": "La Chula",
+    "category": "discoteca",
+    "description": "Discoteca tematica mexicana con musica latina y ambiente festivo. Muy popular en Medellin.",
+    "short_description": "Discoteca latina tematica",
+    "address": "Cra. 35 #8A-30",
+    "zone": "El Poblado",
+    "price_range": "$$$",
+    "vibe_tags": [
+      "fiesta",
+      "latino",
+      "tematico"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=600",
+    "opening_hours": {
+      "viernes": "22:00-04:00",
+      "sabado": "22:00-04:00"
+    },
+    "social_links": {
+      "instagram": "@lachula"
+    },
+    "latitude": 6.2093,
+    "longitude": -75.5661
+  },
+  {
+    "name": "Perro Negro",
+    "category": "discoteca",
+    "description": "Discoteca urbana con reggaeton y musica latina. Ambiente moderno y energetico.",
+    "short_description": "Discoteca urbana de reggaeton",
+    "address": "Cra. 35 #7-25",
+    "zone": "El Poblado",
+    "price_range": "$$$",
+    "vibe_tags": [
+      "reggaeton",
+      "fiesta",
+      "urbano"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=600",
+    "opening_hours": {
+      "viernes": "22:00-04:00",
+      "sabado": "22:00-04:00"
+    },
+    "social_links": {
+      "instagram": "@perronegro"
+    },
+    "latitude": 6.2089,
+    "longitude": -75.5653
+  },
+  {
+    "name": "Fahrenheit Club",
+    "category": "discoteca",
+    "description": "Club nocturno con musica electronica y ambiente exclusivo. DJs locales e internacionales.",
+    "short_description": "Club electronico exclusivo",
+    "address": "Cra. 43E #11-30",
+    "zone": "El Poblado",
+    "price_range": "$$$",
+    "vibe_tags": [
+      "electronica",
+      "club",
+      "fiesta"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=600",
+    "opening_hours": {
+      "viernes": "22:00-04:00",
+      "sabado": "22:00-04:00"
+    },
+    "social_links": {
+      "instagram": "@fahrenheit"
+    },
+    "latitude": 6.2078,
+    "longitude": -75.5662
+  },
+  {
+    "name": "Son Havana",
+    "category": "discoteca",
+    "description": "Discoteca de salsa con ambiente caribeno y musica en vivo. Ideal para bailar.",
+    "short_description": "Discoteca de salsa caribena",
+    "address": "Cra. 70 #44B-30",
+    "zone": "Laureles",
+    "price_range": "$$",
+    "vibe_tags": [
+      "salsa",
+      "baile",
+      "latino"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=600",
+    "opening_hours": {
+      "viernes": "20:00-03:00",
+      "sabado": "20:00-03:00"
+    },
+    "social_links": {
+      "instagram": "@sonhavana"
+    },
+    "latitude": 6.2515,
+    "longitude": -75.5885
+  },
+  {
+    "name": "Biblioteca Espana",
+    "category": "cultura",
+    "description": "Complejo cultural iconico en Santo Domingo Savio. Representa la transformacion urbana de Medellin.",
+    "short_description": "Biblioteca iconica de Medellin",
+    "address": "Santo Domingo Savio",
+    "zone": "El Centro",
+    "price_range": "$",
+    "vibe_tags": [
+      "cultura",
+      "arquitectura",
+      "historia"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600",
+    "opening_hours": {
+      "lunes": "08:00-17:00",
+      "martes": "08:00-17:00",
+      "miercoles": "08:00-17:00",
+      "jueves": "08:00-17:00",
+      "viernes": "08:00-17:00"
+    },
+    "social_links": {
+      "instagram": "@medellin"
+    },
+    "latitude": 6.294,
+    "longitude": -75.547
+  },
+  {
+    "name": "Parque Norte",
+    "category": "deporte",
+    "description": "Parque de diversiones con atracciones mecanicas y espacios recreativos. Ideal para familias.",
+    "short_description": "Parque de diversiones",
+    "address": "Cra. 53 #76-115",
+    "zone": "El Centro",
+    "price_range": "$$",
+    "vibe_tags": [
+      "diversion",
+      "familia",
+      "outdoor"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1508606572321-901ea443707f?w=600",
+    "opening_hours": {
+      "viernes": "13:00-21:00",
+      "sabado": "13:00-21:00",
+      "domingo": "13:00-21:00"
+    },
+    "social_links": {
+      "instagram": "@parquenorte"
+    },
+    "latitude": 6.2708,
+    "longitude": -75.5659
+  },
+  {
+    "name": "Sky Center Medellin",
+    "category": "deporte",
+    "description": "Centro de paracaidismo indoor con tunel de viento. Experiencia unica en la ciudad.",
+    "short_description": "Paracaidismo indoor",
+    "address": "Cra. 48 #10 Sur-100",
+    "zone": "El Poblado",
+    "price_range": "$$$",
+    "vibe_tags": [
+      "extremo",
+      "aventura",
+      "unico"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1508606572321-901ea443707f?w=600",
+    "opening_hours": {
+      "lunes": "10:00-20:00",
+      "martes": "10:00-20:00",
+      "miercoles": "10:00-20:00",
+      "jueves": "10:00-20:00",
+      "viernes": "10:00-20:00",
+      "sabado": "10:00-20:00",
+      "domingo": "10:00-20:00"
+    },
+    "social_links": {
+      "instagram": "@skycenter"
+    },
+    "latitude": 6.195,
+    "longitude": -75.57
+  },
+  {
+    "name": "Bodytech",
+    "category": "deporte",
+    "description": "Cadena de gimnasios con equipos modernos y entrenadores profesionales. Amplia oferta de clases.",
+    "short_description": "Gimnasio completo",
+    "address": "Centro Comercial Santafe",
+    "zone": "El Poblado",
+    "price_range": "$$$",
+    "vibe_tags": [
+      "fitness",
+      "gym",
+      "salud"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600",
+    "opening_hours": {
+      "lunes": "05:00-22:00",
+      "martes": "05:00-22:00",
+      "miercoles": "05:00-22:00",
+      "jueves": "05:00-22:00",
+      "viernes": "05:00-22:00",
+      "sabado": "08:00-18:00",
+      "domingo": "08:00-14:00"
+    },
+    "social_links": {
+      "instagram": "@bodytech"
+    },
+    "latitude": 6.1965,
+    "longitude": -75.5735
+  },
+  {
+    "name": "Parque Juan Pablo II",
+    "category": "deporte",
+    "description": "Parque recreativo con piscinas y zonas deportivas. Ideal para actividades al aire libre.",
+    "short_description": "Parque recreativo con piscinas",
+    "address": "Cra. 70 #16-04",
+    "zone": "Belen",
+    "price_range": "$",
+    "vibe_tags": [
+      "familia",
+      "outdoor",
+      "recreacion"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1508606572321-901ea443707f?w=600",
+    "opening_hours": {
+      "martes": "09:00-17:00",
+      "miercoles": "09:00-17:00",
+      "jueves": "09:00-17:00",
+      "viernes": "09:00-17:00",
+      "sabado": "09:00-17:00",
+      "domingo": "09:00-17:00"
+    },
+    "social_links": {
+      "instagram": "@inder_medellin"
+    },
+    "latitude": 6.23,
+    "longitude": -75.59
+  },
+  {
+    "name": "Aeroparque Juan Pablo II",
+    "category": "deporte",
+    "description": "Espacio para deportes extremos como BMX y skate. Ambiente juvenil y activo.",
+    "short_description": "Parque para deportes extremos",
+    "address": "Cra. 70 #16-04",
+    "zone": "Belen",
+    "price_range": "$",
+    "vibe_tags": [
+      "extremo",
+      "skate",
+      "bmx"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1508606572321-901ea443707f?w=600",
+    "opening_hours": {
+      "lunes": "08:00-18:00",
+      "martes": "08:00-18:00",
+      "miercoles": "08:00-18:00",
+      "jueves": "08:00-18:00",
+      "viernes": "08:00-18:00",
+      "sabado": "08:00-18:00",
+      "domingo": "08:00-18:00"
+    },
+    "social_links": {
+      "instagram": "@inder_medellin"
+    },
+    "latitude": 6.2302,
+    "longitude": -75.5905
+  },
+  {
+    "name": "Pista de Atletismo Belén",
+    "category": "deporte",
+    "description": "Pista olímpica de atletismo del INDER con cancha de fútbol sintética. Disponible para el público general sin costo. Ideal para corredores y equipos amateur.",
+    "short_description": "Pista olímpica pública de atletismo",
+    "address": "Cra. 76 #32B-55, Belén",
+    "zone": "Belén",
+    "price_range": "$",
+    "vibe_tags": [
+      "running",
+      "atletismo",
+      "gratuito",
+      "outdoor"
+    ],
+    "image_url": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600",
+    "opening_hours": {
+      "lunes": "06:00-21:00",
+      "martes": "06:00-21:00",
+      "miercoles": "06:00-21:00",
+      "jueves": "06:00-21:00",
+      "viernes": "06:00-21:00",
+      "sabado": "06:00-18:00",
+      "domingo": "06:00-18:00"
+    },
+    "social_links": {
+      "instagram": "@inder_medellin"
+    },
+    "latitude": 6.228,
+    "longitude": -75.594
   }
 ]
