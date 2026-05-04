@@ -24,7 +24,7 @@ async def submit_feedback(place_id: str, req: FeedbackRequest, user: dict = Depe
         "visited_at": req.visited_at,
     }).execute()
 
-    # Actualizar promedio del lugar
+    # Update place average rating
     all_feedback = supabase.table("user_feedback").select("rating").eq("place_id", place_id).execute()
     ratings = [f["rating"] for f in all_feedback.data]
     avg = sum(ratings) / len(ratings) if ratings else 0
@@ -34,16 +34,22 @@ async def submit_feedback(place_id: str, req: FeedbackRequest, user: dict = Depe
         "total_reviews": len(ratings),
     }).eq("id", place_id).execute()
 
-    # Generar embedding del comentario (async, no bloquea)
-    if req.comment and len(req.comment) > 10:
-        try:
-            from app.services.embedding_service import generate_embedding
-            embedding = await generate_embedding(req.comment)
-            supabase.table("user_feedback").update({
-                "embedding": embedding,
-            }).eq("id", feedback.data[0]["id"]).execute()
-        except Exception:
-            pass
+    # Generate comment embedding for RAG (P3)
+    # Minimum 3 chars to capture short but valid comments ("Ok", "Good")
+    if req.comment and len(req.comment.strip()) >= 3:
+        if not feedback.data:
+            # Insert returned no data — skip embedding update
+            print(f"[feedback] WARNING: insert returned no data for place_id={place_id}, embedding skipped")
+        else:
+            try:
+                from app.services.embedding_service import generate_embedding
+                embedding = await generate_embedding(req.comment)
+                supabase.table("user_feedback").update({
+                    "embedding": embedding,
+                }).eq("id", feedback.data[0]["id"]).execute()
+            except Exception as e:
+                # Do not block user response, but log the error for debugging
+                print(f"[feedback] ERROR generating embedding for feedback {feedback.data[0]['id']}: {e}")
 
     return {"data": feedback.data[0], "error": None}
 

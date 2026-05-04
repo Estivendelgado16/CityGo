@@ -20,7 +20,7 @@ async def search_places(
     query: str,
     category: str | None = None,
     limit: int = 5,
-    threshold: float = 0.5,
+    threshold: float = 0.3,
 ) -> list[dict]:
     """
     Búsqueda semántica de lugares.
