@@ -133,7 +133,17 @@ OPENAI_API_KEY=sk-proj-...                     # OpenAI API key
 ENVIRONMENT=development
 MAX_AGENT_ITERATIONS=5
 FRONTEND_URL=http://localhost:5173
+RAG_MATCH_THRESHOLD=0.30
+RAG_FEEDBACK_WEIGHT=0.15
+RAG_RATING_WEIGHT=0.10
+RAG_POSITIVE_FEEDBACK_WEIGHT=0.12
 ```
+
+Parámetros RAG:
+- `RAG_MATCH_THRESHOLD`: similitud mínima semántica del lugar base.
+- `RAG_FEEDBACK_WEIGHT`: peso de similitud semántica de comentarios embebidos.
+- `RAG_RATING_WEIGHT`: peso del rating promedio (normalizado 0-1).
+- `RAG_POSITIVE_FEEDBACK_WEIGHT`: bonus por proporción y volumen de feedback positivo.
 
 > **⚠️ Seguridad**: El archivo `.env` contiene credenciales sensibles. No lo versiones (`.gitignore` ya lo excluye). Las claves de Supabase y OpenAI deben mantenerse confidenciales.
 
@@ -143,6 +153,8 @@ FRONTEND_URL=http://localhost:5173
 2. Ve a **SQL Editor**
 3. Copia y pega el contenido de `scripts/supabase_setup.sql`
 4. Ejecuta todo el script (crea tablas, índices, funciones vectoriales, políticas RLS y triggers)
+
+Si tu proyecto ya existe y solo quieres actualizar el ranking RAG, ejecuta `scripts/rag_tuning_migration.sql`.
 
 Esto configurará:
 - Tablas: `users`, `user_preferences`, `places`, `events`, `saved_places`, `user_feedback`, `chat_messages`
