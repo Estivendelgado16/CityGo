@@ -17,6 +17,8 @@ import pytest
 from app.services.supabase_client import get_supabase
 from app.services.embedding_service import search_places, generate_embedding
 
+pytestmark = pytest.mark.integration
+
 # ----------------------------------------------------------------------
 # Helpers
 # ----------------------------------------------------------------------
