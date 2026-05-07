@@ -4,6 +4,8 @@ from contextlib import asynccontextmanager
 
 import logging
 import uuid
+from app.exception.handlers import app_exception_handler
+from app.exception.custom_exception import AppException
 
 from app.config import get_settings
 from app.routers import auth, onboarding, chat, places, feedback, conversations
@@ -27,6 +29,11 @@ app = FastAPI(
     description="Agente turístico de Medellín",
     version="0.1.0",
     lifespan=lifespan,
+)
+
+app.add_exception_handler(
+    AppException,
+    app_exception_handler
 )
 
 @app.middleware("http")
