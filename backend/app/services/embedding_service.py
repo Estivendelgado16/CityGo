@@ -1,15 +1,20 @@
+from functools import lru_cache
 from openai import AsyncOpenAI
 from app.config import get_settings
-
-settings = get_settings()
-openai_client = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
 
 EMBEDDING_MODEL = "text-embedding-3-small"
 
 
+@lru_cache(maxsize=1)
+def _get_openai_client() -> AsyncOpenAI:
+    settings = get_settings()
+    return AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
+
+
 async def generate_embedding(text: str) -> list[float]:
     """Genera embedding para un texto usando OpenAI."""
-    response = await openai_client.embeddings.create(
+    client = _get_openai_client()
+    response = await client.embeddings.create(
         model=EMBEDDING_MODEL,
         input=text,
     )
