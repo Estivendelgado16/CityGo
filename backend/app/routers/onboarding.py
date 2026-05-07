@@ -50,3 +50,38 @@ async def get_profile(user: dict = Depends(get_current_user)):
         },
         "error": None,
     }
+
+
+@router.get("/me/preferences")
+async def get_preferences(user: dict = Depends(get_current_user)):
+    """
+    Devuelve solo las preferencias del usuario:
+    - Las guardadas manualmente en el onboarding.
+    - Las detectadas automáticamente por el agente (agent_detected_preferences).
+    """
+    supabase = get_supabase()
+    prefs = supabase.table("user_preferences").select("*").eq("user_id", user["id"]).single().execute()
+
+    return {"data": prefs.data or {}, "error": None}
+
+
+@router.patch("/me/preferences")
+async def update_preferences(body: dict, user: dict = Depends(get_current_user)):
+    """
+    Permite actualizar preferencias manualmente desde el frontend
+    (ej: cambiar presupuesto o zonas después del onboarding).
+    Solo actualiza los campos enviados, no sobreescribe todo el objeto.
+    """
+    allowed_fields = {
+        "budget_range", "favorite_cuisines", "preferred_vibes",
+        "preferred_zones", "dietary_restrictions", "interests",
+    }
+    update_data = {k: v for k, v in body.items() if k in allowed_fields}
+
+    if not update_data:
+        return {"data": None, "error": "No se enviaron campos válidos para actualizar"}
+
+    supabase = get_supabase()
+    supabase.table("user_preferences").update(update_data).eq("user_id", user["id"]).execute()
+
+    return {"data": {"updated": list(update_data.keys())}, "error": None}
