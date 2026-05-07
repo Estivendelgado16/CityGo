@@ -1,15 +1,31 @@
-from app.services.embedding_service import search_places, search_events
+from app.services.supabase_client import get_supabase
+from app.services.embedding_service import generate_embedding, search_events
 
 
 async def execute_tool(tool_name: str, tool_args: dict, user_id: str) -> dict:
     """Ejecuta una herramienta del agente y devuelve el resultado."""
 
     if tool_name == "buscar_lugares":
-        results = await search_places(
-            query=tool_args["query"],
-            category=tool_args.get("categoria"),
-            limit=tool_args.get("limit", 5),
-        )
+        supabase = get_supabase()
+        query_embedding = await generate_embedding(tool_args["query"])
+        cat_filter = tool_args.get("categoria")
+        if cat_filter == "todos":
+            cat_filter = None
+
+        response = supabase.rpc(
+            "search_places_with_feedback",
+            {
+                "query_embedding": query_embedding,
+                "match_threshold": 0.5,
+                "match_count": tool_args.get("limit", 5),
+                "category_filter": cat_filter,
+                "feedback_weight": 0.5,
+                "rating_weight": 0.3,
+                "positive_feedback_weight": 0.2,
+            },
+        ).execute()
+
+        results = response.data or []
         return {
             "lugares_encontrados": len(results),
             "resultados": [
@@ -25,8 +41,6 @@ async def execute_tool(tool_name: str, tool_args: dict, user_id: str) -> dict:
         }
 
     elif tool_name == "consultar_feedback_comunitario":
-        from app.services.supabase_client import get_supabase
-
         supabase = get_supabase()
         response = (
             supabase.table("user_feedback")
@@ -46,8 +60,6 @@ async def execute_tool(tool_name: str, tool_args: dict, user_id: str) -> dict:
         }
 
     elif tool_name == "obtener_detalles_lugar":
-        from app.services.supabase_client import get_supabase
-
         supabase = get_supabase()
         response = supabase.table("places").select("*").eq("id", tool_args["place_id"]).single().execute()
         return response.data or {"error": "Lugar no encontrado"}
@@ -65,8 +77,6 @@ async def execute_tool(tool_name: str, tool_args: dict, user_id: str) -> dict:
         }
 
     elif tool_name == "actualizar_preferencias_usuario":
-        from app.services.supabase_client import get_supabase
-
         supabase = get_supabase()
         current = (
             supabase.table("user_preferences")
