@@ -1,11 +1,19 @@
 import json
 import uuid
+
 from fastapi import APIRouter, Depends
-from fastapi.responses import StreamingResponse
+from fastapi.responses import JSONResponse, StreamingResponse
 from pydantic import BaseModel
 from typing import AsyncGenerator
 
 from app.dependencies import get_current_user
+from app.utils.input_validator import (
+    is_valid_length,
+    is_empty_message,
+    has_spam_patterns,
+    contains_abusive_language,
+)
+from app.utils.context_validator import is_out_of_context
 from app.services.supabase_client import get_supabase
 
 router = APIRouter()
@@ -24,6 +32,32 @@ def sse_event(data: dict) -> str:
 async def chat(req: ChatRequest, user: dict = Depends(get_current_user)):
     conversation_id = req.conversation_id or str(uuid.uuid4())
 
+    if is_empty_message(req.message):
+        return JSONResponse(
+            content={"error": "El mensaje no puede estar vacío"},
+            status_code=400,
+        )
+    if not is_valid_length(req.message):
+        return JSONResponse(
+            content={"error": "Mensaje demasiado largo o corto"},
+            status_code=400,
+        )
+    if contains_abusive_language(req.message):
+        return JSONResponse(
+            content={"error": "Parce, mantengamos el respeto"},
+            status_code=400,
+        )
+    if has_spam_patterns(req.message):
+        return JSONResponse(
+            content={"error": "Mensaje repetitivo detectado"},
+            status_code=400,
+        )
+    if is_out_of_context(req.message):
+        return JSONResponse(
+            content={"error": "Solo puedo ayudarte con planes y lugares en Medellín, parce. Pregúntame sobre restaurantes, eventos, vida nocturna o cultura en la ciudad."},
+            status_code=400,
+        )
+
     async def generate() -> AsyncGenerator[str, None]:
         full_response = ""
 
@@ -37,11 +71,9 @@ async def chat(req: ChatRequest, user: dict = Depends(get_current_user)):
             ):
                 yield sse_event(event)
 
-                # Acumular texto para guardar en historial
                 if event.get("type") == "text_delta":
                     full_response += event.get("content", "")
 
-            # Guardar en historial
             supabase = get_supabase()
 
             supabase.table("chat_messages").insert({

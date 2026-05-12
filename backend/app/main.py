@@ -1,16 +1,27 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request 
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
+
+import logging
+import uuid
+from app.exception.handlers import app_exception_handler
+from app.exception.custom_exception import AppException
 
 from app.config import get_settings
 from app.routers import auth, onboarding, chat, places, feedback, conversations
 
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(message)s"
+)
+
+logger = logging.getLogger(__name__)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    print("🚀 CityGo Backend arrancando...")
+    logger.info("🚀 CityGo Backend arrancando...")
     yield
-    print("👋 CityGo Backend cerrando...")
+    logger.info("👋 CityGo Backend cerrando...")
 
 
 app = FastAPI(
@@ -19,6 +30,25 @@ app = FastAPI(
     version="0.1.0",
     lifespan=lifespan,
 )
+
+app.add_exception_handler(
+    AppException,
+    app_exception_handler
+)
+
+@app.middleware("http")
+async def add_request_id(request: Request, call_next):
+    request_id = str(uuid.uuid4())
+
+    logger.info(f"➡️ Request iniciada - ID: {request_id}")
+
+    response = await call_next(request)
+
+    response.headers["X-Request-ID"] = request_id
+
+    logger.info(f"✅ Request finalizada - ID: {request_id}")
+
+    return response
 
 settings = get_settings()
 
