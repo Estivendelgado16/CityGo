@@ -1,5 +1,7 @@
 import json
 import re
+import time
+import logging
 from dataclasses import dataclass, field
 from typing import AsyncGenerator
 
@@ -9,6 +11,8 @@ from app.config import get_settings
 from app.agent.tools import AGENT_TOOLS
 from app.agent.tool_executor import execute_tool
 from app.prompts.system_prompt import build_system_prompt
+
+logger = logging.getLogger("citygo.agent")
 
 settings = get_settings()
 openai_client = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
@@ -41,6 +45,13 @@ async def agent_loop(
     Yields eventos tipados que se empaquetan como SSE.
     """
     MAX_ITERATIONS = settings.MAX_AGENT_ITERATIONS
+    loop_start = time.perf_counter()
+
+    logger.info(
+        "agent_loop.start",
+        extra={"user_id": user_id, "conversation_id": conversation_id,
+               "message_preview": user_message[:80]},
+    )
     state = _AgentState()
 
     user_prefs = await _get_user_preferences(user_id)
@@ -52,24 +63,48 @@ async def agent_loop(
         {"role": "user", "content": user_message},
     ]
 
-    for _ in range(MAX_ITERATIONS):
-        response = await openai_client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=messages,
-            tools=AGENT_TOOLS,
-            tool_choice="auto",
-            temperature=0.7,
-        )
+    for iteration in range(MAX_ITERATIONS):
+        iter_start = time.perf_counter()
+        try:
+            response = await openai_client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=messages,
+                tools=AGENT_TOOLS,
+                tool_choice="auto",
+                temperature=0.7,
+            )
+        except Exception as exc:
+            logger.error(
+                "agent_loop.llm_error",
+                extra={"user_id": user_id, "iteration": iteration, "error": str(exc)},
+                exc_info=True,
+            )
+            yield {"type": "error", "code": "llm_error", "message": "Error al consultar el modelo de lenguaje."}
+            return
 
+        iter_ms = round((time.perf_counter() - iter_start) * 1000)
         choice = response.choices[0]
         message = choice.message
         finish_reason = choice.finish_reason
+
+        logger.info(
+            "agent_loop.iteration",
+            extra={"user_id": user_id, "iteration": iteration,
+                   "finish_reason": finish_reason, "latency_ms": iter_ms},
+        )
 
         if finish_reason not in _VALID_FINISH_REASONS:
             yield {"type": "text_delta", "content": "Parce, algo inesperado pasó. Intenta de nuevo."}
             return
 
+        # El modelo decidió responder
         if finish_reason == "stop":
+            total_ms = round((time.perf_counter() - loop_start) * 1000)
+            logger.info(
+                "agent_loop.done",
+                extra={"user_id": user_id, "total_latency_ms": total_ms,
+                       "iterations": iteration + 1},
+            )
             async for event in _parse_response(message.content or "", state):
                 yield event
             return
@@ -115,12 +150,26 @@ async def agent_loop(
                         continue
                     state.pref_updates += 1
 
+                logger.info(
+                    "agent_loop.tool_call",
+                    extra={"user_id": user_id, "tool": tool_name,
+                           "args_preview": str(tool_args)[:120]},
+                )
+
                 yield {"type": "thinking", "content": _thinking_text(tool_name, tool_args)}
 
+                tool_start = time.perf_counter()
                 try:
                     result = await execute_tool(tool_name, tool_args, user_id)
                 except Exception as e:
                     result = {"error": f"Fallo inesperado en {tool_name}: {str(e)}"}
+
+                tool_ms = round((time.perf_counter() - tool_start) * 1000)
+
+                logger.info(
+                    "agent_loop.tool_result",
+                    extra={"user_id": user_id, "tool": tool_name, "latency_ms": tool_ms},
+                )
 
                 if tool_name == "buscar_lugares":
                     state.search_done = True
@@ -133,6 +182,10 @@ async def agent_loop(
             continue
 
     # Se agotaron las iteraciones
+    logger.warning(
+        "agent_loop.max_iterations_reached",
+        extra={"user_id": user_id, "max": MAX_ITERATIONS},
+    )
     yield {"type": "text_delta", "content": "Parce, me tomó más de lo esperado. Déjame darte lo mejor que encontré."}
 
 

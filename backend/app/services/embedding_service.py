@@ -1,5 +1,9 @@
+import time
+import logging
 from openai import AsyncOpenAI
 from app.config import get_settings
+
+logger = logging.getLogger("citygo.rag")
 
 EMBEDDING_MODEL = "text-embedding-3-small"
 
@@ -8,10 +12,14 @@ async def generate_embedding(text: str) -> list[float]:
     """Genera embedding para un texto usando OpenAI."""
     settings = get_settings()
     client = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
+    start = time.perf_counter()
     response = await client.embeddings.create(
         model=EMBEDDING_MODEL,
         input=text,
     )
+    ms = round((time.perf_counter() - start) * 1000)
+    logger.info("rag.embedding_generated",
+                extra={"text_len": len(text), "latency_ms": ms})
     return response.data[0].embedding
 
 
@@ -36,6 +44,10 @@ async def search_places(
     rating_weight = max(0.0, rag_settings.RAG_RATING_WEIGHT)
     positive_feedback_weight = max(0.0, rag_settings.RAG_POSITIVE_FEEDBACK_WEIGHT)
 
+    logger.info("rag.search_start",
+                extra={"query_preview": query[:80], "category": category,
+                       "limit": limit, "threshold": threshold})
+    search_start = time.perf_counter()
     query_embedding = await generate_embedding(query)
     supabase = get_supabase()
 
@@ -53,8 +65,11 @@ async def search_places(
         rpc_payload["positive_feedback_weight"] = positive_feedback_weight
 
     response = supabase.rpc("search_places_with_feedback", rpc_payload).execute()
-
-    return response.data or []
+    results = response.data or []
+    ms = round((time.perf_counter() - search_start) * 1000)
+    logger.info("rag.search_done",
+                extra={"results_count": len(results), "latency_ms": ms})
+    return results
 
 
 async def search_events(
