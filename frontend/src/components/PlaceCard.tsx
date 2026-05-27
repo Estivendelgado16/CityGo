@@ -1,95 +1,82 @@
 import { Heart, MapPin, Star } from "lucide-react";
-import { useState } from "react";
-import type { PlaceCardData } from "../types/sse-contract";
+import { type Place, VIBE_META } from "@/lib/mock-data";
+import { useWishlist } from "@/lib/wishlist-store";
+import { cn } from "@/lib/utils";
+import { SafeImage } from "@/components/SafeImage";
 
-interface Props {
-  place: PlaceCardData;
-  compact?: boolean;
-}
+const VIBE_CLASSES: Record<string, string> = {
+  coral: "bg-coral/15 text-coral border-coral/30",
+  jungle: "bg-jungle/15 text-jungle border-jungle/30",
+  magenta: "bg-magenta/15 text-magenta border-magenta/30",
+};
 
-export default function PlaceCard({ place, compact = false }: Props) {
-  const [saved, setSaved] = useState(false);
-
-  const categoryEmoji: Record<string, string> = {
-    restaurante: "🍽️",
-    bar: "🍸",
-    discoteca: "🪩",
-    cultura: "🎨",
-    deporte: "🏃",
-  };
+export function PlaceCard({ place }: { place: Place }) {
+  const { has, toggle } = useWishlist();
+  const saved = has(place.id);
 
   return (
-    <div className={`bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden ${compact ? "" : "my-3"}`}>
-      {/* Imagen */}
-      <div className="relative">
-        <img
-          src={place.image_url}
+    <article className="group relative overflow-hidden rounded-3xl bg-card shadow-card transition-all hover:-translate-y-1 hover:shadow-glow">
+      <div className="relative aspect-[4/3] overflow-hidden">
+        <SafeImage
+          src={place.image}
           alt={place.name}
-          className={`w-full object-cover ${compact ? "h-32" : "h-44"}`}
+          category={`${place.category} ${place.vibes.join(" ")}`}
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
         <button
-          onClick={() => setSaved(!saved)}
-          className="absolute top-3 right-3 w-9 h-9 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-sm transition-transform active:scale-90"
+          onClick={() => toggle(place.id)}
+          aria-label={saved ? "Quitar de mis planes" : "Guardar en mis planes"}
+          className={cn(
+            "absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full backdrop-blur-md transition-all",
+            saved
+              ? "bg-coral text-coral-foreground scale-110"
+              : "bg-white/80 text-foreground hover:bg-white"
+          )}
         >
-          <Heart
-            size={18}
-            className={saved ? "fill-red-500 text-red-500" : "text-gray-600"}
-          />
+          <Heart className={cn("h-5 w-5", saved && "fill-current")} />
         </button>
-        {place.is_open_now !== undefined && (
-          <span
-            className={`absolute top-3 left-3 text-xs font-medium px-2.5 py-1 rounded-full ${
-              place.is_open_now
-                ? "bg-green-100 text-green-700"
-                : "bg-red-100 text-red-700"
-            }`}
-          >
-            {place.is_open_now ? "Abierto" : "Cerrado"}
-          </span>
-        )}
+        <div className="absolute bottom-3 left-3 flex items-center gap-1 rounded-full bg-white/90 px-2.5 py-1 text-xs font-semibold backdrop-blur">
+          <Star className="h-3.5 w-3.5 fill-sun text-sun" />
+          {place.rating}
+        </div>
       </div>
 
-      {/* Info */}
-      <div className="p-3.5">
-        <div className="flex items-start justify-between gap-2">
-          <div>
-            <h3 className="font-semibold text-gray-900 leading-tight">
-              {categoryEmoji[place.category] || "📍"} {place.name}
-            </h3>
-            <div className="flex items-center gap-1.5 mt-1 text-sm text-gray-500">
-              <MapPin size={13} />
-              <span>{place.zone}</span>
-              <span className="text-gray-300">·</span>
-              <span className="font-medium text-accent-600">{place.price_range}</span>
-            </div>
+      <div className="space-y-3 p-4">
+        <div>
+          <div className="flex items-start justify-between gap-2">
+            <h3 className="text-lg font-bold leading-tight">{place.name}</h3>
+            <span className="shrink-0 text-sm font-semibold text-muted-foreground">
+              {"$".repeat(place.priceLevel)}
+            </span>
           </div>
-          <div className="flex items-center gap-1 bg-primary-50 px-2 py-1 rounded-lg shrink-0">
-            <Star size={13} className="fill-primary-500 text-primary-500" />
-            <span className="text-sm font-semibold text-primary-700">{place.rating}</span>
-            <span className="text-xs text-primary-500">({place.total_reviews})</span>
+          <div className="mt-1 flex items-center gap-1 text-xs text-muted-foreground">
+            <MapPin className="h-3 w-3" />
+            {place.neighborhood} · {place.category}
           </div>
         </div>
 
-        {!compact && place.description && (
-          <p className="text-sm text-gray-600 mt-2 leading-relaxed line-clamp-2">
-            {place.description}
-          </p>
-        )}
+        <p className="line-clamp-2 text-sm text-muted-foreground">{place.description}</p>
 
-        {/* Vibe tags */}
-        {place.vibe_tags.length > 0 && (
-          <div className="flex flex-wrap gap-1.5 mt-2.5">
-            {place.vibe_tags.slice(0, compact ? 2 : 4).map((tag) => (
+        <div className="flex flex-wrap gap-1.5">
+          {place.vibes.map((v) => {
+            const meta = VIBE_META[v];
+            return (
               <span
-                key={tag}
-                className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full"
+                key={v}
+                className={cn(
+                  "inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs font-medium",
+                  VIBE_CLASSES[meta.color]
+                )}
               >
-                {tag}
+                <span>{meta.emoji}</span>
+                {meta.label}
               </span>
-            ))}
-          </div>
-        )}
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </article>
   );
 }
